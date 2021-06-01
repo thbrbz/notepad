@@ -11,10 +11,13 @@ class CardNota extends Component {
   render() {
     return (
       <section className="card-nota">
-        <header className="card-nota_cabecalho">
-          <h3 className="card-nota_titulo">{this.props.titulo}</h3>
+        <header className="card-nota_cabeca">
+          <h4 className="card-nota_categoria">{this.props.categoria}</h4>
           <DeleteSvg onClick={this.apagar.bind(this)}/>
         </header>
+        <section className="card-nota_cabecalho">
+          <h3 className="card-nota_titulo">{this.props.titulo}</h3>
+        </section>
         <p className="card-nota_texto">{this.props.texto}</p>
       </section>
     );
